@@ -18,7 +18,6 @@ interface Props{
 export const ActiveLink:FC <Props>= ({ text, href,}) => {
 
     const router = useRouter();
-    console.log(router.basePath )
     
   return (
     <Link href={router.basePath+href}>
