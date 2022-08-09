@@ -19,10 +19,9 @@ export const ActiveLink:FC <Props>= ({ text, href,}) => {
 
     const router = useRouter();
     console.log(router.query )
-    const UrlLocal = "http://localhost:3000" || "https://01-initial-demo-next.vercel.app" 
     
   return (
-    <Link href={new URL(UrlLocal+ href)}>
+    <Link href={href}>
       <a style={ router.asPath === href ? style : undefined}> {text} </a>
       
     </Link>
